@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V17" />
   <DocumentInfo>
-    <Created>2022-10-06T10:47:21.0791833Z</Created>
+    <Created>2022-10-06T11:53:18.95573Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -129,33 +129,47 @@
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
-    <Access Scope="LiteralConstant" UId="21">
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="AlwaysOn" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
       <Constant>
         <ConstantType>Word</ConstantType>
         <ConstantValue>1234</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="GlobalVariable" UId="22">
+    <Access Scope="GlobalVariable" UId="23">
       <Symbol>
         <Component Name="TempVar" />
       </Symbol>
     </Access>
-    <Part Name="Move" UId="23" DisabledENO="true">
+    <Part Name="Contact" UId="24" />
+    <Part Name="Move" UId="25" DisabledENO="true">
       <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="24">
-      <Powerrail />
-      <NameCon UId="23" Name="en" />
-    </Wire>
-    <Wire UId="25">
-      <IdentCon UId="21" />
-      <NameCon UId="23" Name="in" />
-    </Wire>
     <Wire UId="26">
-      <NameCon UId="23" Name="out1" />
+      <Powerrail />
+      <NameCon UId="24" Name="in" />
+    </Wire>
+    <Wire UId="27">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="out" />
+      <NameCon UId="25" Name="en" />
+    </Wire>
+    <Wire UId="29">
       <IdentCon UId="22" />
+      <NameCon UId="25" Name="in" />
+    </Wire>
+    <Wire UId="30">
+      <NameCon UId="25" Name="out1" />
+      <IdentCon UId="23" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
